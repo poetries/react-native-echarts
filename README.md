@@ -87,6 +87,12 @@ screenshots：
 
 ![image](https://github.com/somonus/react-native-echarts/blob/master/example/demoAndroid.png)
 
+解决安卓上打包后图表不显示问题：把src/components/Echarts/tpl.html文件复制到 项目android/app/src/main/assets 下(如果没有，就新建一个)
+库里面已经修改了引用
+```
+source={Platform.OS == 'android'?{uri: 'file:///android_asset/tpl.html'}:require('./tpl.html')}
+```
+
 ## License
 
 native-echarts is released under the MIT license.

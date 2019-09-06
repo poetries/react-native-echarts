@@ -41,8 +41,8 @@ export default class App extends Component {
             height: this.props.height || 400,
             backgroundColor: this.props.backgroundColor || 'transparent'
           }}
-          source={require('./tpl.html')}
-        // source={Platform.OS == 'android'?{uri: 'file:///android_asset/tpl.html'}:require('./tpl.html')}
+          // source={require('./tpl.html')}
+          source={Platform.OS == 'android'?{uri: 'file:///android_asset/tpl.html'}:require('./tpl.html')}
         />
       </View>
     );
